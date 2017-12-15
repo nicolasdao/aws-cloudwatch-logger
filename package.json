@@ -1,0 +1,36 @@
+{
+  "name": "aws-cloudwatch-log",
+  "version": "0.0.0",
+  "description": "Fast & Simple Logging to AWS CloudWatch",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "eslint index.js --fix",
+    "release": "standard-version"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicolasdao/aws-cloudwatch-logger.git"
+  },
+  "keywords": [
+    "aws",
+    "cloudwatch",
+    "log",
+    "logger",
+    "logstream"
+  ],
+  "author": "Nicolas Dao",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/nicolasdao/aws-cloudwatch-logger/issues"
+  },
+  "homepage": "https://github.com/nicolasdao/aws-cloudwatch-logger#readme",
+  "dependencies": {
+    "aws4": "^1.6.0",
+    "axios": "^0.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.13.1",
+    "standard-version": "^4.2.0"
+  }
+}
