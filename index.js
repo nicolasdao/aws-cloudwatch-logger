@@ -42,6 +42,9 @@ const getRequestParams = (method, region, payload, keys={}) => {
 }
 
 const createLogStream = (logStreamName, { logGroupName, region, accessKeyId, secretAccessKey, local }) => {
+	if (local)
+		return Promise.resolve({ message: 'No need to create stream. Local mode is on.' })
+
 	if (!logGroupName)
 		throw new Error('Missing required argument: \'logGroupName\' is required.')
 	if (!logStreamName)
@@ -65,15 +68,12 @@ const createLogStream = (logStreamName, { logGroupName, region, accessKeyId, sec
 		baseURL: uri,
 		headers: headers
 	})
-
-	if (local)
-		return Promise.resolve({ message: 'No need to create stream. Local mode is on.' })
-	else
-		return request.post('', payload)
-			.then(results => results.data)
-			.catch(err => {
-				throw new Error(err.response.data.message)
-			})
+	
+	return request.post('', payload)
+		.then(results => results.data)
+		.catch(err => {
+			throw new Error(err.response.data.message)
+		})
 }
 
 const _sequenceTokens = new Map()
