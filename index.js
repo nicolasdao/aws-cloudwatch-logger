@@ -42,7 +42,7 @@ const getRequestParams = (method, region, payload, keys={}) => {
 }
 
 const createLogStream = (logStreamName, { logGroupName, region, accessKeyId, secretAccessKey, local }) => {
-	if (local)
+	if (local && local != 'false')
 		return Promise.resolve({ message: 'No need to create stream. Local mode is on.' })
 
 	if (!logGroupName)
@@ -68,7 +68,7 @@ const createLogStream = (logStreamName, { logGroupName, region, accessKeyId, sec
 		baseURL: uri,
 		headers: headers
 	})
-	
+
 	return request.post('', payload)
 		.then(results => results.data)
 		.catch(err => {
@@ -233,7 +233,7 @@ const Logger = class {
 			}
 		}
 
-		this.log = local ? console.log : log
+		this.log = local && local != 'false' ? console.log : log
 	}
 }
 
