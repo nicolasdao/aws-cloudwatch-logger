@@ -68,7 +68,7 @@ Logs and events can't simply being added to CloudWatch. Instead, they are added 
 AWS deprecates the usage of the same LogStream by multiple concurrent machine. The recommended method is that each machine creates its own unique LogStream inside a specific LogGroup.
 
 # License
-Copyright (c) 2017, Neap Pty Ltd.
+Copyright (c) 2018, Neap Pty Ltd.
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
