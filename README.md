@@ -1,12 +1,6 @@
-<a href="https://neap.co" target="_blank"><img src="https://neap.co/img/neap_color_horizontal.png" alt="Neap Pty Ltd logo" title="Neap" height="100" width="225" style="float: right" align="right" /></a>
+# AWS CloudWatch Logger &middot;  [![NPM](https://img.shields.io/npm/v/aws-cloudwatch-log.svg?style=flat)](https://www.npmjs.com/package/aws-cloudwatch-log) [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause) [![Neap](https://neap.co/img/made_by_neap.svg)](#this-is-what-we-re-up-to)
 
-# AWS CloudWatch Logger - Fast & Simple Logging to AWS CloudWatch
-[![NPM][1]][2] 
-
-[1]: https://img.shields.io/npm/v/aws-cloudwatch-log.svg?style=flat
-[2]: https://www.npmjs.com/package/aws-cloudwatch-log
-
-The logger logs in the background. By default, it will immediately send the log to your configured AWS LogStream. You can also easily configure it so that the logs are buffered for a specific period of time before being sent as a batch to AWS LogStream. This is the recommended way. 
+Fast & Simple Logging to AWS CloudWatch. It logs in the background without blocking. By default, it will immediately send the log to your configured AWS LogStream. You can also easily configure it so that the logs are buffered for a specific period of time before being sent as a batch to AWS LogStream. This is the recommended way. 
 
 For a quick recap on how logging on AWS CloudWatch works, refer to the [Annex below](#annex-short-explanation-about-logs-in-aws-cloudwatch).   
 
@@ -65,6 +59,7 @@ createLogStream('your-new-unique-logstream', config)
 ```
 
 # This Is What We re Up To
+<a href="https://neap.co" target="_blank"><img src="https://neap.co/img/neap_color_horizontal.png" alt="Neap Pty Ltd logo" title="Neap" height="89" width="200" style="float: right" align="right" /></a>
 We are Neap, an Australian Technology consultancy powering the startup ecosystem in Sydney. We simply love building Tech and also meeting new people, so don't hesitate to connect with us at [https://neap.co](https://neap.co).
 
 # Annex - Short Explanation About Logs In AWS CloudWatch
