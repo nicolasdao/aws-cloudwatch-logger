@@ -36,7 +36,7 @@ const getRequestParams = (method, region, payload, keys={}) => {
 		aws4.sign(opts)
 
 	return {
-		uri: 'https://' + path.posix.join(opts.hostname, opts.path),
+		uri: `https://${opts.hostname}${opts.path}`,
 		headers: opts.headers
 	}
 }
