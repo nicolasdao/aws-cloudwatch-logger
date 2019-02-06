@@ -8,7 +8,6 @@
 
 const axios = require('axios')
 const aws4  = require('aws4')
-const path = require('path')
 
 const getRequestParams = (method, region, payload, keys={}) => {
 	if (!region)
@@ -36,7 +35,7 @@ const getRequestParams = (method, region, payload, keys={}) => {
 		aws4.sign(opts)
 
 	return {
-		uri: 'https://' + path.posix.join(opts.hostname, opts.path),
+		uri: `https://${opts.hostname}${opts.path}`,
 		headers: opts.headers
 	}
 }
