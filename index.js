@@ -8,7 +8,6 @@
 
 const axios = require('axios')
 const aws4  = require('aws4')
-const path = require('path')
 
 const getRequestParams = (method, region, payload, keys={}) => {
 	if (!region)
