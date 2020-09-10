@@ -142,7 +142,7 @@ const addLogsToStream = (entry, logGroupName, logStreamName, region, keys={}, se
 		})
 		.catch(err => {
 			//console.log('Oops')
-			const token = err.response.data.expectedSequenceToken
+			const token = err.response && err.response.data && err.response.data.expectedSequenceToken
 			if (token) {
 				_sequenceTokens.set(tokenKey, token)
 				retryCount += 1
