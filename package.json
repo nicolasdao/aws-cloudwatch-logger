@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "eslint": "eslint index.js --fix",
-    "release": "standard-version"
+    "lint": "eslint index.js --fix",
+    "push": "git push --follow-tags origin master && npm publish",
+    "rls": "standard-version --release-as",
+    "v": "node -e \"console.log(require('./package.json').version)\""
   },
   "repository": {
     "type": "git",
