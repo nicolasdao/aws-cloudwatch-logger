@@ -1,6 +1,6 @@
 {
   "name": "aws-cloudwatch-log",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Fast & Simple Logging to AWS CloudWatch",
   "main": "index.js",
   "scripts": {
